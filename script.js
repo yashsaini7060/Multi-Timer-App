@@ -16,20 +16,13 @@ function myFunction() {
 }
 
 
-// function startTimer(seconds) {
-//   var parentDiv =  document.getElementById("times");
-//   var timerContainer = document.createElement("div");
-//   timerContainer.className = "addtimer newtimer";
-//   parentDiv.appendChild(timerContainer);
-
-
-// }
-
-
 function startTimer(seconds) {
+  var audio = new Audio('alarm.mp3');
+
   var timerContainer = document.createElement("div");
   timerContainer.className = "addtimer newtimer";
-  document.getElementById("times").appendChild(timerContainer);
+  var timesElement = document.getElementById("times");
+  timesElement.appendChild(timerContainer);
 
   // Create timer display
   var timerDisplay = document.createElement("div");
@@ -39,7 +32,7 @@ function startTimer(seconds) {
   deleteButton.textContent = "Delete";
   deleteButton.onclick = function() {
     // Remove the timer container
-    document.body.removeChild(timerContainer);
+    timesElement.removeChild(timerContainer);
   };
 
   // Append timer display and delete button to the timer container
@@ -70,11 +63,21 @@ function startTimer(seconds) {
     // Check if the timer has reached zero
     if (seconds <= 0) {
       clearInterval(timerInterval); // Stop the timer
+      timeLeft.textContent=""
       timerDisplay.textContent = "Time is Up!";
-      timerContainer.className="time-completed"
+      timerContainer.className="time-completed";
+      audio.play();
+
+      // Change the delete button to a stop button
+      deleteButton.textContent = "Stop";
+      deleteButton.onclick = function() {
+        // Stop the sound
+        audio.pause();
+        audio.currentTime = 0;
+
+        // Remove the timer container
+        timesElement.removeChild(timerContainer);
+      };
     }
-
-    // Show the delete button while the timer is running
   }, 1000); // Update every 1000 milliseconds (1 second)
-
 }
