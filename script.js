@@ -1,11 +1,13 @@
 
-function myFunction() {
+function getTime() {
   let hours = parseInt(document.getElementById("hours").value);
   let minutes = parseInt(document.getElementById("minutes").value);
   let seconds = parseInt(document.getElementById("seconds").value);
-  // alert(hours)
-  // alert(typeof hours)
-  // alert(isNaN(hours))
+
+  document.getElementById("hours").value = "";
+  document.getElementById("minutes").value = "";
+  document.getElementById("seconds").value = "";
+  
   if(isNaN(hours) || isNaN(minutes) || isNaN(seconds) || hours < 0 || minutes < 0 || seconds < 0) {
     alert("Please enter valid non-negative numbers for hours, minutes, and seconds.");
     return
@@ -17,11 +19,15 @@ function myFunction() {
 
 
 function startTimer(seconds) {
+
   var audio = new Audio('alarm.mp3');
+
+  let noTimers = document.getElementById("no-timers");
 
   var timerContainer = document.createElement("div");
   timerContainer.className = "addtimer newtimer";
   var timesElement = document.getElementById("times");
+  noTimers.style.display = "none";
   timesElement.appendChild(timerContainer);
 
   // Create timer display

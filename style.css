@@ -85,7 +85,9 @@ button{
   align-items: center;
 }
 
-
+#no-timers{
+  margin-top: 2rem;
+}
 .current-time{
   background: #39393E;
   width: 10%;
