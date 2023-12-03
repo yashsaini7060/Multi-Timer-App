@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+html{
+  font-size: 100%;
+  background-color: #1d1d23;
+  color: white;
+}
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clock{
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.addtimer{
+  width: 45%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #34344A;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+.addtimer h3{
+  font-size: 1.5rem;
+}
+
+form {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+p{
+  font-size: 2rem;
+}
+
+input{
+  width: 2.3rem;
+  background-color: transparent;
+  border: none;
+  color: white !important;
+  font-size: 2rem;
+}
+#minutes{
+  width: 3.6rem;;
+}
+input::placeholder{
+  color: white;
+}
+
+button{
+  width: 5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #F0F757;
+}
+.timers{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.current-time{
+  background: #39393E;
+  width: 10%;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 2rem auto 0 auto;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+
+.newtimer div{
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  width: 30%;
+}
+
+.time-completed{
+  width: 45%;
+  height: 4rem;
+  font-size: 1.8rem;
+  color: #1d1d23;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 8px;
+  background-color: #F0F757;
+}
+.time-completed button{
+  background-color: #1d1d23;
+  color: white;
+  font-size: 1rem;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 20px;
+  border: none;
+}

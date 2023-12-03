@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Timer</title>
+</head>
+<body>
+  <div  class="clock">
+    <h1>Multiple Timers App</h1>
+    <div class="addtimer">
+      <h3>Set Timer :</h3>
+      <form action="">
+        <input type="text" name="hour" id="hours" placeholder="hh">
+        <p>:</p>
+        <input type="text" name="minute" id="minutes" placeholder="mm"> 
+        <p>:</p>
+        <input type="text" name="second" id="seconds" placeholder="ss">
+      </form>
+      <button id="set" onclick="myFunction()">Set</button>
+    </div>
+
+
+    <div class="timers" id="times">
+      <h3 class="current-time">Current Timer</h3>
+      <div class="addtimer newtimer">
+        <h3>Time Left :</h3>
+          <div >
+            <h4>10</h4>
+            <p>:</p>
+            <h4>20</h4>
+            <p>:</p>
+            <h4>30</h4>
+          </div>
+          <button id="delete">Delete</button>
+      </div>
+      <div class="time-completed">
+        <div></div>
+        <h3 >Time Is Up!</h3>
+        <button id="stop">Stop</button>
+      </div>
+    </div>
+
+
+    </div>
+  <script src="./script.js"></script>
+</body>
+</html>
